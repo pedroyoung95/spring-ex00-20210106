@@ -27,6 +27,7 @@ public class SampleTests {
 	//실제 작업에서는 ApplicationContext와 ContextConfiguration어노테이션 사용할 필요X
 	//의존성 주입을 어떻게 할지 설명서 역할을 하는 root-context만 잘 작성하면 됨
 	
+	@Test
 	public void testExist() {
 		assertNotNull(restaurant);
 		
@@ -35,19 +36,19 @@ public class SampleTests {
 		log.info(restaurant.getChef());
 	}
 	
-	@Test
-	public void testExist2() {
-		Chef c1 = (Chef) context.getBean("chef");
-		Restaurant r1 = (Restaurant) context.getBean("restaurant");
-		
-		//assert~ : log가 갖고있는 메소드들
-		assertNotNull(r1.getChef());
-		assertEquals(c1, r1.getChef());
-		
-		log.info("------");
-		assertNotNull(context);
-		assertNotNull(context.getBean("chef"));
-		assertNotNull(context.getBean("restaurant"));
-		
-	}
+//	@Test
+//	public void testExist2() {
+//		Chef c1 = (Chef) context.getBean("chef");
+//		Restaurant r1 = (Restaurant) context.getBean("restaurant");
+//		
+//		//assert~ : log가 갖고있는 메소드들
+//		assertNotNull(r1.getChef());
+//		assertEquals(c1, r1.getChef());
+//		
+//		log.info("------");
+//		assertNotNull(context);
+//		assertNotNull(context.getBean("chef"));
+//		assertNotNull(context.getBean("restaurant"));
+//		
+//	}
 }
