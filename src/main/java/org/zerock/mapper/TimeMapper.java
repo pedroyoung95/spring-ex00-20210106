@@ -7,6 +7,8 @@ public interface TimeMapper {
 	@Select("SELECT sysdate FROM dual")
 	//getTime메소드가 어노테이션에 있는 쿼리문을 실행한다고 명시
 	public String getTime();
+	
+	public String getTime2();
 }
 //클래스 로딩
 //커넥션 열기

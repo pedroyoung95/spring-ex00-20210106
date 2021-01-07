@@ -22,8 +22,19 @@ public class TimeMapperTests {
 	
 	@Test
 	public void testGetTime() {
+		log.info("---------------------------");
 		log.info(timeMapper.getClass().getName());
 		log.info(timeMapper.getTime());
+		log.info("---------------------------");		
+	}
+	
+	@Test
+	public void testGetTime2() {
+		log.info("----------------------------");
+		log.info("getTime2");
+		assertNotNull(timeMapper.getTime2());
+		log.info(timeMapper.getTime2());
+		log.info("----------------------------");
 	}
 
 }
